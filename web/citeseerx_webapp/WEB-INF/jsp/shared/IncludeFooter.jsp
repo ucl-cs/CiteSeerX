@@ -11,8 +11,8 @@
       <li><a href="http://sourceforge.net/projects/citeseerx/" target="_blank">Source</a></li>      
       <li><a href="http://csxstatic.ist.psu.edu/contact" target="_blank">Contact Us</a></li>
     </ul>
-  	<p class="info">Developed at and hosted by <a href="http://ist.psu.edu">The College of Information Sciences and Technology</a></p>
-  	<p>&copy; 2007-2010 <a href="http://www.psu.edu">The Pennsylvania State University</a></p>
+  	<p class="info">Developed at and hosted by <a href="http://cs.ucl.ac.uk">Department of Computer Science</a></p>
+  	<p>&copy; 2013 <a href="http://www.ucl.ac.uk">University College London</a></p>
   </div>
 </div> <%-- Closing Div for Wrapper --%>
 
