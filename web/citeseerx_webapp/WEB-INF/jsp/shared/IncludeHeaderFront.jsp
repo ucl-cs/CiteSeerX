@@ -33,5 +33,5 @@
 	<div id="wrapper">
   	<%@ include file="IncludeTopNav.jsp" %>
 	  <div id="header">
-			<h1 id="title"><a href="<c:url value='/'/>" title="<fmt:message key="app.name"/>"><img src="<c:url value='/images/csx_logo.png'/>" alt="<fmt:message key="app.name"/> logo" /></a></h1>
+			<h1 id="title"><a href="<c:url value='/'/>" title="<fmt:message key="app.name"/>"><img src="<c:url value='/images/csx-logo-ucl.png'/>" alt="<fmt:message key="app.name"/> logo" /></a></h1>
 		</div>
