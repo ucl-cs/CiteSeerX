@@ -8,10 +8,10 @@
  <div id="search_tabs">
   <ul id="tabs_titles" class="mootabs_title">
    <li title="docs_tab" class="active"><div>Documents</div></li>
-   <li title="auth_tab"><div>Authors</div></li>
+  <%-- <li title="auth_tab"><div>Authors</div></li>
    <li title="table_tab" class="yellow">
    <div>Tables <span class="style1" style="color:#FF0000; font-style:italic; font-weight:bold; font:'Times New Roman', Times, serif">!</span></div>
-   </li>
+   </li>--%>
    <li title="algorithm_tab" class="yellow">
      <div>Algorithms <span class="style1" style="color:#FF0000; font-style:italic; font-weight:bold; font:'Times New Roman', Times, serif">!</span></div>
    </li>
@@ -28,7 +28,8 @@
     </fieldset>
    </form>
   </div> <!-- End docs_tab -->
-  
+
+<%--  
   <div id="auth_tab" class="mootabs_panel">
    <form method="get" action="<c:url value="/search"/>" enctype="application/x-www-form-urlencoded" id="auth_search_form">
     <!-- name not valid in XHTML, To get around this issue, use <form id="header_search_form" ... > and in my link use javascript:document.forms['header_search_form'].submit(); which validates correctly. -->
@@ -44,7 +45,9 @@
     </fieldset>
    </form>
   </div> <!-- End auth_tab -->
-  
+ --%>
+ 
+<%--
   <div id="table_tab" class="mootabs_panel">
    <form method="get" action="<c:url value="/search"/>" enctype="application/x-www-form-urlencoded" id="table_search_form">
     <!-- name not valid in XHTML, To get around this issue, use <form id="header_search_form" ... > and in my link use javascript:document.forms['header_search_form'].submit(); which validates correctly. -->
@@ -56,7 +59,9 @@
     </fieldset>
    </form>
   </div> <!-- End table_tab -->
-  
+--%>  
+
+
   <div id="algorithm_tab" class="mootabs_panel">
    <form method="get" action="<c:url value="/search"/>" enctype="application/x-www-form-urlencoded" id="algorithm_search_form">
     <!-- name not valid in XHTML, To get around this issue, use <form id="header_search_form" ... > and in my link use javascript:document.forms['header_search_form'].submit(); which validates correctly. -->

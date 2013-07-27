@@ -16,7 +16,7 @@
         <input type="hidden" name="t" value="doc" />
       </form>
     </div>
-		  
+<%--		  
     <div id="search_auth">
       <form method="get" action="<c:url value='/search'/>" enctype="application/x-www-form-urlencoded">
 	    <label>Authors:</label>
@@ -33,7 +33,8 @@
         <input type="hidden" name="t" value="auth" />
       </form>
     </div>
-		  
+--%>
+<%--		  
     <div id="search_tables">
       <form method="get" action="<c:url value='/search'/>" enctype="application/x-www-form-urlencoded">
         <label>Tables:</label>
@@ -43,7 +44,7 @@
         <input type="hidden" name="t" value="table" />
       </form>
     </div>
-    
+    --%>
     <div id="search_algorithms">
       <form method="get" action="<c:url value='/search'/>" enctype="application/x-www-form-urlencoded">
         <label>Tables:</label>

@@ -13,7 +13,7 @@
         <input type="hidden" name="t" value="doc" />
       </form>
     </div>
-		  
+<%--		  
 	<div id="search_auth">
 	  <form method="get" action="<c:url value='/search'/>" enctype="application/x-www-form-urlencoded">
 	    <label>Authors:</label>
@@ -27,7 +27,8 @@
         <input type="hidden" name="sort" value="<c:if test='${ empty param.sort }'>ndocs</c:if><c:if test='${ ! empty param.sort }'><c:out value='${ param.sort }'/></c:if>" />
         <input type="hidden" name="t" value="auth" />
 	   </form>
-	  </div>		  
+	  </div>--%>
+<%--		  
     <div id="search_tables">
       <form method="get" action="<c:url value='/search'/>" enctype="application/x-www-form-urlencoded">
         <label>Tables:</label>
@@ -37,6 +38,7 @@
         <input type="hidden" name="sort" value="<c:if test='${ empty param.sort }'>rlv</c:if><c:if test='${ ! empty param.sort }'><c:out value='${ param.sort }'/></c:if>" />
      </form>
     </div>
+--%>
 </c:if>
 <c:if test="${ !empty param.q && param.t == 'doc'}">
 	  <div id="search_docs">
@@ -53,6 +55,7 @@
 	   </form>
 	  </div>
   </c:if>
+<%--
   <c:if test="${ !empty param.q && param.t == 'auth' }">
     <div id="search_auth">
       <form method="get" action="<c:url value='/search'/>" enctype="application/x-www-form-urlencoded">
@@ -69,6 +72,8 @@
       </form>
     </div>
   </c:if>
+--%>
+<%--
   <c:if test="${ !empty param.q && param.t == 'table' }">
     <div id="search_tables">
       <form method="get" action="<c:url value='/search'/>" enctype="application/x-www-form-urlencoded">
@@ -78,5 +83,6 @@
         <input type="hidden" name="t" value="table" />
       </form>
     </div>
-  </c:if>
+  </c:if>i
+--%>
 </div>
