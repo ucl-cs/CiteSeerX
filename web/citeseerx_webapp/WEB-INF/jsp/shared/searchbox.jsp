@@ -8,13 +8,13 @@
  <div id="search_tabs">
   <ul id="tabs_titles" class="mootabs_title">
    <li title="docs_tab" class="active"><div>Documents</div></li>
-  <%-- <li title="auth_tab"><div>Authors</div></li>
-   <li title="table_tab" class="yellow">
+ - <li title="auth_tab"><div>Authors</div></li>
+ <%--  <li title="table_tab" class="yellow">
    <div>Tables <span class="style1" style="color:#FF0000; font-style:italic; font-weight:bold; font:'Times New Roman', Times, serif">!</span></div>
    </li>--%>
-   <li title="algorithm_tab" class="yellow">
+   <%--<li title="algorithm_tab" class="yellow">
      <div>Algorithms <span class="style1" style="color:#FF0000; font-style:italic; font-weight:bold; font:'Times New Roman', Times, serif">!</span></div>
-   </li>
+   </li>--%>
   </ul><!-- remove extra whitespace by coding in-line lists on one line -->
   
   <div id="docs_tab" class="mootabs_panel">
@@ -28,8 +28,7 @@
     </fieldset>
    </form>
   </div> <!-- End docs_tab -->
-
-<%--  
+  
   <div id="auth_tab" class="mootabs_panel">
    <form method="get" action="<c:url value="/search"/>" enctype="application/x-www-form-urlencoded" id="auth_search_form">
     <!-- name not valid in XHTML, To get around this issue, use <form id="header_search_form" ... > and in my link use javascript:document.forms['header_search_form'].submit(); which validates correctly. -->
@@ -45,7 +44,6 @@
     </fieldset>
    </form>
   </div> <!-- End auth_tab -->
- --%>
  
 <%--
   <div id="table_tab" class="mootabs_panel">
@@ -61,7 +59,7 @@
   </div> <!-- End table_tab -->
 --%>  
 
-
+<%--
   <div id="algorithm_tab" class="mootabs_panel">
    <form method="get" action="<c:url value="/search"/>" enctype="application/x-www-form-urlencoded" id="algorithm_search_form">
     <!-- name not valid in XHTML, To get around this issue, use <form id="header_search_form" ... > and in my link use javascript:document.forms['header_search_form'].submit(); which validates correctly. -->
@@ -73,6 +71,7 @@
     </fieldset>
    </form>
   </div> <!-- End algorithm_tab -->
+--%>
 
  </div> <!-- End search_tabs -->
 </div> <!-- End search_meta_box -->
