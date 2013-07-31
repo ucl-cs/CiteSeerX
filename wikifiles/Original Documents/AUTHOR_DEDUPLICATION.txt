@@ -1,0 +1,24 @@
+Author deduplication configuration
+Juan Pablo Fernandez Ramirez.
+
+We have notice that our extractors some times extracts and creates more than 
+once record for the same author within a paper. While we work to improve our
+extractor in order to minimize this issue, we also provide a program that will
+eliminate duplicate author records associated to a paper. Here we explain how to
+configure and run the process.
+
+1. Configure your application.
+
+   Edit conf/csx.properties to provide adequate values for:
+   
+   a. name.model: Location to the name model file. (it's provided within the 
+   code, and it's located on: WEB-INF/resources/metric-distance/names.model)
+   
+2. Deduplicate Entries.
+
+   To deduplicate entries in the database you can:
+   
+   a. Run the ./correctAuthors script
+   b. Setup the job to run the author de-duplication job (See INSTALL.txt jobs)
+      If you have more than one web application, for example in a cluster, be
+      sure of configure the job only in one of the machines!

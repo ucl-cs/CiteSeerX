@@ -1,0 +1,78 @@
+External metadata Installation and configuration
+Juan Pablo Fernandez Ramirez.
+
+Instructions provided here are additional steps to the ones provided on:
+
+1. INSTALL.txt
+2. INSTALL_DOI.txt
+
+This file provides information about how to install, configure and use the
+external metadata database, and how it is use within the application.
+
+1. Install the SQL database.
+
+   Refer to the Install the SQL databases in INSTALL.txt
+   
+2. Download external metadata files.
+
+   For CiteSeerX:
+   
+   a. dblp metadata: download the dblp.xml and dblp.dtd files (http://dblp.uni-trier.de/xml/).
+   b. CiteULike: the linkouts file (http://www.citeulike.org/faq/data.adp)
+   
+3. Configure your application
+
+   Edit conf/csx.properties to provide adequate values for:
+   
+   a. The external metadata database
+   b. The location of the down loaded files (dblp.xml, dblp.dtd, linkouts)
+   c. Labels: You can change the values for the labels. However, if you do so,
+      you need also to change the values in the link_types table inside your
+      citeseerx database to match the ones in csx.propierties file.
+      
+4. Populate/update the external database
+
+   The database can be populated and/or updated by running:
+   
+   ./updateExternalMetadata
+   
+   The DBLP metadata is completed loaded into the database. However, from 
+   CiteULike only CiteSeerX related records are loaded.
+   
+5. How to use the external metadata database
+
+   Currently, the external metadata is used to create links to DBLP and CiteULike
+   from the summary pages of documents within CiteSeerX corpus. In the future,
+   DBLP data will be used to do automatic corrections and other task that will
+   improve CiteSeerX corpus.
+   
+   Links to external sources are stored in two tables within the CiteSeerX
+   database:
+   
+   * links_types: which stores the label, and the base URL where the link should
+     points to.
+   * elinks: which stores the CiteSeerX paper id, the label associated to the
+     link, and the URL portion that needs to be appended to the base URL to 
+     point to the resource in the external site.
+     
+     An example, of records in this two tables will be:
+     
+     DBLP, http://www.informatik.uni-trier.de/~ley/ and
+     10.1.1.1.1485 DBLP db/conf/dsn/dsn2000.html#BondavalliMCFPS00
+     
+   The elink table is populated either by:
+   
+   a. Running the ./updateExternalLinks script. 
+   
+      This script will try to find matches for every document in the CiteSeerX
+      corpus which does not have any match. It works for both CiteULike and DBLP.
+      
+      Indeed, The only way to create links for CiteULike is using this script.
+      
+   b. After a correction is done.
+   
+      The DBLP linker listen for changes in documents metadata. After a change 
+      is reported, the Linker tries to find a math between the corrected 
+      document and a record in DBLP.
+      
+     

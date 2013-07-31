@@ -1,0 +1,37 @@
+Author Disambiguation
+Puck Treeratpituk
+
+example of how to run author disambiguation
+
+Prerequisite
+--------------
+1) Edit "csx.config.properties" (the disambiguation section)
+
+2) Make sure R is installed, with randomForest and Rserve packages
+
+3) Start R server with the following command
+   
+   R CMD Rserve --RS-workdir <citeseerx dir>
+
+   <citeseerx dir> is the directory where citeseerx code reside e.g. /home/puck/citeseerx
+
+Iterative Author Disambiguation
+-------------------------------
+
+use CsxDisambiguationUpdate ... which currently take a text file as input
+
+let we have say a text file "record1.txt" is
+
+	>>name=Jian Huang
+	>>affil=Information Sciences and Technology
+	>>email=
+	>>title=Enhancing Cross Document Coreference of Web Documents with Context Similarity and Very Large Scale Text Categorization
+	>>coauthors=Jian Huang, Pucktada Treeratpituk, Sarah M. Taylor, C. Lee Giles
+	>>ord=1
+
+to disambiguate this new record against perviously known author clusters, run...
+
+	java -Dcsx.boot=bootstrap/disambiguation.txt -Dcsx.conf=conf edu.psu.citeseerx.disambiguation.CsxDisambiguationUpdate record1.txt
+
+Iterative Author Disambiguation
+-------------------------------
